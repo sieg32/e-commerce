@@ -1,0 +1,86 @@
+body{
+    display: block;
+    margin: 0;
+    background-color: rgb(1, 1, 100);
+    image-rendering: auto;
+    background-repeat:no-repeat;
+  
+   
+
+    background-size:cover;
+    background-image: url('https://img.freepik.com/free-vector/network-connection-background_23-2148879892.jpg?w=740&t=st=1695044505~exp=1695045105~hmac=1593ebbfbbc8ff81200706ac8ff9e298463158417972f5a312f5e55119d375a5');
+}
+
+
+
+#login-form{
+    position: absolute;
+    top:10%;
+    left: 10%;
+
+    
+
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    backdrop-filter: blur(12px);
+    align-items: center;
+    justify-content: center;
+    min-width: 520px;
+    max-width: 50%;
+    border: 1px solid rgba(194, 193, 193, 0.637);
+    height: 80vh;
+    
+}
+#login-form img{
+    
+    
+    object-fit: contain;
+
+    width: 30%;
+    filter: invert();
+
+
+
+}
+#inputs{
+    width:70%;
+}
+#inputs p{
+    color: white;
+    text-align: center;
+}
+#inputs form{
+   
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+#username, #password , #email{
+    color: white;
+    background-color: rgba(0,0,0,0.1);
+    margin: 10px;
+    padding-left: 10px;
+    height: 30px;
+    border: none;
+
+    border-radius: 15px;
+   
+    width: 80%;
+}
+#username:focus, #password:focus{
+    box-shadow: 0 0 5px rgb(255, 255, 255);
+    outline-width: 0;
+}
+
+
+#login-btn{
+    font-size: 1.3em;
+    color: white;
+    width: 60%;
+    height: 40px;
+    margin: 15px;
+    background-color: blue;
+    border-radius: 20px;
+}
