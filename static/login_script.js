@@ -38,7 +38,11 @@ sendData=(url,form)=>{
         console.log(response);
         if(response.data.login === "success"){
             console.log("logged in");
+            console.log(response.data)
             window.alert('logged in');
+
+            localStorage.setItem("token",response.data.token);
+            localStorage.setItem("user", response.data.username);
 
         }else if(response.data.login === "username does not exist"){
             console.log("does not exist")
