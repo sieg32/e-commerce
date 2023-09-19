@@ -15,8 +15,11 @@
 
         <div id="inputs">
             <form id="login_form" action="/user/login" method="post">
-                <input type="text" name="username" id="username" placeholder="username">
-                <input type="password" name="password" id="password" placeholder="password">
+                <input type="text" required name="username" id="username" placeholder="username">
+                <p id="doesnt-exist" class="hidden">username does not exists</p>
+                <p id="already-exist" class="hidden">username already exists</p>
+                <input type="password" required name="password" id="password" placeholder="password">
+                <p id="pw_incorrect" class="hidden">password incorrect</p>
                 <button type="submit" id="login-btn">login</button>
             </form>
             <p id="textlogin">does not have an account <a href=""> register</a></p>
