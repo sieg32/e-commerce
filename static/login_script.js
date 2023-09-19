@@ -20,7 +20,7 @@ switchRegister = function(){
     
     
     
-    login_text.innerHTML= "already have an account <a href='login.html'>login</a>";
+    login_text.innerHTML= "already have an account <a href='login'>login</a>";
     
 
 }
@@ -36,12 +36,6 @@ const register_btn = document.querySelector('#textlogin a');
 register_btn.addEventListener('click', (elem)=>{
     console.log(registered);
     elem.preventDefault();
-    if(registered){
-        switchRegister();
-        registered = false;
-    }else if(!registered){
-        
-        switchLogin()
-    }
+   switchRegister();
     
 })
