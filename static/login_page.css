@@ -76,6 +76,9 @@ body{
 
 
 #login-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     font-size: 1.3em;
     color: white;
     width: 60%;

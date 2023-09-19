@@ -11,7 +11,7 @@ loginPage = (req, res)=>{
 
 createUser = async(req,res)=>{
     const nigga = req.body;
-    console.log(nigga);
+    console.log("user created ");
     try{
         await user.create(nigga);
 
@@ -25,8 +25,9 @@ createUser = async(req,res)=>{
 
 
 loginUser = async(req,res)=>{
-    re
+    console.log(req.body);
+    res.send(req.body);
 
 }
 
-module.exports = {loginPage, createUser};
+module.exports = {loginPage, createUser, loginUser};
