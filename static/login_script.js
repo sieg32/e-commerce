@@ -43,7 +43,8 @@ sendData=(url,form)=>{
 
             localStorage.setItem("token",response.data.token);
             localStorage.setItem("user", response.data.username);
-
+            
+            window.location.href = "/";
         }else if(response.data.login === "username does not exist"){
             console.log("does not exist")
            

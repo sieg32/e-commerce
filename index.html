@@ -10,6 +10,17 @@
 
 </head>
 <body>
+    <div id="confirmPopup">
+        <div id="logOutConfirm">
+            <h3>Are you sure</h3>
+            <h3>you want to log out</h3>
+            <div>
+                <button id="btn_confirm">confirm</button>
+                <button id="btn_no">No</button>
+            </div>
+        </div>
+    </div>
+  
     <header>
         <div id="logo">
             <img src="/icon/e-commerce.png" alt="e-commerce logo" width="50px">
@@ -23,6 +34,11 @@
         <div id="user">
             <img src="/icon/user-128-512.png" alt="user logo">
             <h3>log in</h3>
+            <div id="user_box" >
+                <p id="view_profile">view profile</p>
+                <p id="orders">orders</p>
+                <p id="logOut">log out</p>
+            </div>
         </div>
     </header>
     <section id="suggestion">
@@ -66,6 +82,8 @@
         </div>
     </div>
 
+    
+    <script type="module" src="/main_page.js"></script>
 
     
 </body>
