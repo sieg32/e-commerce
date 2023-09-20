@@ -5,13 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>profile</title>
     <link rel="stylesheet" href="/profile_page.css">
+    <script src="https://kit.fontawesome.com/cd635a5268.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <section id="left">
-       <div><h3>profile</h3></div> 
-       <div><h3>privacy</h3></div>
-        <div><h3>security</h3></div>
+       <div id="homeBtn"><i class="fa-solid fa-house"></i><h3> Home</h3></div> 
+       <div class="focus" id="profileBtn"><i class="fa-solid fa-user"></i><h3>profile</h3></div> 
+       <div><i class="fa-solid fa-user-secret"></i><h3>privacy</h3></div>
+        <div id="securityBtn"><i class="fa-solid fa-shield-halved"></i><h3>security</h3></div>
 
     </section>
     <div id="main">
@@ -21,9 +23,31 @@
 
             </div>
             <div id="basic_info">
-                <h3>name<span></span></h3>
-                <h3>email<span></span></h3>
+                <div>
+
+                    <h3>name :  <span id="name"></span></h3>
+                </div>
+                <div>
+
+                    <h3>email :  <span id="email"></span></h3>
+                </div>
                 
+            </div>
+        </div>
+
+        <div id="privacy">
+            <div id="box">
+                <h3>change password</h3>
+                <form action="" id="passwordForm">
+                    <label for="password">Enter new password</label>
+                    <input type="text" name="password" id="password">
+                    <label for="password">confirm new password</label>
+                    <input type="text" name="passwordconfirm" id="passwordconfirm">
+                    <button>confirm</button>
+                </form>
+                
+
+
             </div>
         </div>
 
