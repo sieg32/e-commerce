@@ -25,6 +25,12 @@ loginPage = (req, res)=>{
     res.sendFile(Root +'/login.html');
        
 }
+profilePage= (req,res)=>{
+    let current = __dirname
+    let Root = current.slice(0,-12);
+   res.sendFile(Root +'/profile.html');
+
+}
 
 
 createUser = async(req,res)=>{
@@ -72,4 +78,21 @@ loginUser = async(req,res)=>{
 
 }
 
-module.exports = {loginPage, createUser, loginUser};
+getUserInfo =async (req, res)=>{
+    console.log(res.locals);
+    const userData = await user.find({"username": res.locals.username});
+   
+     const  {username, email, _id} = userData[0];
+    console.log(userData[0]);
+    
+    console.log(_id);
+
+    res.send({"authorization":"success",
+            "userdata":{ username,
+            "email":email,
+            "id":_id}
+
+    });
+}
+
+module.exports = {loginPage, createUser, loginUser, profilePage};

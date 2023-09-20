@@ -1,0 +1,83 @@
+body{
+    margin:0;
+    background-image: linear-gradient(45deg, blue, rgb(51, 51, 165));
+    display: flex;
+
+}
+
+#left{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:30px 0;
+    color: white;
+    text-shadow: 0 0 3px  black;
+    background-color: rgb(9, 9, 134);
+    width: 20%;
+    margin: 10vh 10px 10px 30px;
+    border: 1px solid black;
+    border-radius: 25px;
+}
+#left div{
+
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:static;
+    
+
+}
+@keyframes glow {
+    0%{
+
+    }
+    100%{
+        text-shadow: 0 0 2px white;
+        box-shadow: 0 0 5px white;
+    }
+    
+}
+#left div:hover{
+   animation: glow 0.3s forwards;
+   border-radius: 25px;
+
+}
+
+#main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
+    width: 100%;
+
+}
+#profile{
+    margin-top: 10vh;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#profile_avatar{
+    margin:0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+}
+#profile_avatar img{
+    width: 100%;
+}
+
+#basic_info{
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    width: 80%;
+    margin: 10px;   
+    border: 1px solid rgba(255, 255, 255, 0.719);
+    padding: 20px;
+    border-radius: 25px;
+    background-color: rgba(0, 0, 0, 0.418);
+   
+}
