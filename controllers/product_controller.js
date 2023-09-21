@@ -9,8 +9,11 @@ GetProduct = async (req,res)=>{
 }
 
 addProduct = async (req,res)=>{
-    console.log('niggaserver');
-   res.send('nigga');
+
+    console.log(req.body);
+    const nigga = await product.create(req.body)
+
+    res.send(nigga);
 }
 
 

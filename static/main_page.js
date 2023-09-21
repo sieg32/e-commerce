@@ -53,3 +53,42 @@ btn_confirm.addEventListener('click',()=>{
 
     
 })
+
+
+const Listing = document.querySelector('#product-listing');
+
+
+const fetchProducts=async()=>{
+  await  axios.get('/products/').then((response)=>{
+        const arrayProduct = response.data;
+        arrayProduct.forEach(element => {
+            const product_card = document.createElement('div')
+            const image=document.createElement('img');
+            image.src="/icon/user-128-512.png";
+            const div = document.createElement('div');
+            const name=document.createElement('h4');
+            name.textContent= element.product_name;
+            const price = document.createElement('p');
+            price.textContent = "price: "+ element.price + " rs";
+            const rating = document.createElement('p');
+            rating.textContent = 'rating: ' + element.rating;
+
+            div.appendChild(name);
+            div.appendChild(price);
+            div.appendChild(rating);
+            product_card.appendChild(image);
+            product_card.appendChild(div);
+
+            product_card.classList.add('product');
+
+            Listing.appendChild(product_card);
+            
+
+
+            
+        });
+    })
+}
+
+
+fetchProducts();
