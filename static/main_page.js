@@ -63,6 +63,7 @@ const fetchProducts=async()=>{
         const arrayProduct = response.data;
         arrayProduct.forEach(element => {
             const product_card = document.createElement('div')
+            product_card.id= element.product_name;
             const image=document.createElement('img');
             image.src="/icon/user-128-512.png";
             const div = document.createElement('div');
@@ -81,7 +82,12 @@ const fetchProducts=async()=>{
 
             product_card.classList.add('product');
 
+            product_card.addEventListener('click',(elem)=>{
+                window.location.href = '/products/'+ product_card.id;
+            })
+
             Listing.appendChild(product_card);
+            
             
 
 
@@ -92,3 +98,5 @@ const fetchProducts=async()=>{
 
 
 fetchProducts();
+
+

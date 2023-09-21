@@ -127,15 +127,7 @@ header form button{
     flex-direction: row;
     background-color: rgb(241, 241, 241);
 }
-#left-pane{
-    width: 20vw;
-    border: 1px solid grey;
-    height: 90vh;
-    position:relative;
 
-
-
-}
 
 
 #product-listing{
@@ -144,7 +136,7 @@ header form button{
     grid-template-columns: repeat(4,1fr);
     gap: 20px;
     
-    width: 80vw;
+    width: 100%;
     border: 1px solid black;
 }
 
