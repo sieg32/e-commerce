@@ -16,8 +16,31 @@ addProduct = async (req,res)=>{
     res.send(nigga);
 }
 
+GetSpecificProduct = async (req,res)=>{
+   
+    
+    try{
+        const dataProduct = await product.findOne({product_name:req.params.id});
+        console.log(dataProduct)
+       
+
+        if(dataProduct){
+            res.send(dataProduct)
+
+        }else{
+            res.send('something went wrong')
+        }
+
+    }catch(error){
+        console.log(error);
+        res.send('server error');
+
+    }
+    
+}
 
 
 
 
-module.exports = {addProduct, GetProduct};
+
+module.exports = {addProduct, GetProduct, GetSpecificProduct};
