@@ -7,6 +7,11 @@ const profileBox = document.querySelector('#profile');
 const privacyBox=document.querySelector('#privacy');
 const homeBtn = document.querySelector('#homeBtn');
 
+const popupbtn = document.querySelector('#popup_pass_changed div button');
+
+const formPass  = document.querySelector('#passwordForm');
+
+
 
 
 
@@ -54,3 +59,36 @@ profileBtn.addEventListener('click',()=>{
 homeBtn.addEventListener('click',()=>{
     window.location.href= "/";
 })
+
+formPass.addEventListener('submit',(element)=>{
+    element.preventDefault();
+    const formdata = new FormData(formPass);
+    const val={};
+    formdata.forEach((value,key)=>{
+        val[key]=value;
+    })
+
+    if(val.password=== val.passwordconfirm){
+        axios.post('/user/changePass',val,{
+            headers:{
+                author:localStorage.getItem('token')
+            }
+        }).then((response)=>{
+            if(response.data.passchange === "success"){
+                const popup = document.querySelector('#popup_pass_changed');
+                popup.style.display="flex";
+
+
+            }
+        })
+    }
+
+
+
+})
+
+
+popupbtn.addEventListener('click',()=>{
+    window.location.href = "/";
+})
+

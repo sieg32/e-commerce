@@ -92,4 +92,23 @@ getUserInfo = async (req, res) => {
   });
 };
 
-module.exports = { loginPage, createUser, loginUser, profilePage };
+
+changePass= async(req,res)=>{
+  const userData = await user.find({username:res.locals.username});
+  const {password} = userData[0];
+  const newpass ={};
+  newpass['password']=req.body.password;
+
+  if(password === req.body.oldpassword){
+    console.log(newpass.password);
+    const newValue= await user.findOneAndUpdate({username:res.locals.username},newpass, {new:true})
+    res.send({"passchange":"success",
+        newValue });
+  }else{
+    res.send({"passchange":"passwordNotMatch"});
+  }
+
+
+}
+
+module.exports = { loginPage, createUser, loginUser, profilePage , changePass};

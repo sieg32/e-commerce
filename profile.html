@@ -9,6 +9,12 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
+    <div id="popup_pass_changed">
+        <div>
+            <h1>password changed successfully</h1>
+            <button>home</button>
+        </div>
+    </div>
     <section id="left">
        <div id="homeBtn"><i class="fa-solid fa-house"></i><h3> Home</h3></div> 
        <div class="focus" id="profileBtn"><i class="fa-solid fa-user"></i><h3>profile</h3></div> 
@@ -39,6 +45,8 @@
             <div id="box">
                 <h3>change password</h3>
                 <form action="" id="passwordForm">
+                    <label for="oldPassword">Old password</label>
+                    <input type="text" name="oldpassword" id="oldPassword">
                     <label for="password">Enter new password</label>
                     <input type="text" name="password" id="password">
                     <label for="password">confirm new password</label>

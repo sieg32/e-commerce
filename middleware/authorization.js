@@ -9,13 +9,13 @@ authorize = (req,res,next)=>{
           const nigga = jwt.verify(req.headers.author,process.env.JWT_SECRET_KEY );
          
           res.locals= nigga;
-
+          
+          next(); 
         }catch(error){
             console.log(error);
             res.send({"authorization":"token expire"});
         }
         
-        next(); 
         }else{
             res.send({"authorization":"failed"});
         }
