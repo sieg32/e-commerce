@@ -1,0 +1,109 @@
+body{
+    background-color: whitesmoke;
+    margin: 0;
+}
+
+#main{
+     background-color: whitesmoke;
+     width: 100%;
+     
+}
+
+#main img{
+    width: 100%;
+    height: auto;
+   
+    margin-left: 10%;
+    margin-top: 5%;
+    
+    border: 1px dashed rgba(107, 106, 106, 0.349);
+}
+#buying{
+    left:auto;
+    right:auto;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: 10%;
+    
+    
+
+
+
+}
+#buying button{
+    width: 50%;
+    height: 50px;
+    margin: 2px;
+    background-color: yellow;
+    color: rgb(255, 255, 255);
+    text-shadow: 0 0 5px black;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    font-weight: 600 ;
+    
+}
+#photo{
+    position: sticky;
+    top: 0;
+    width: 40%;
+    
+}
+#details{
+    z-index: 3;
+    backdrop-filter: blur(10px);
+    top:-82vh;
+    padding-left: 20px;
+    
+    
+    
+    position:relative;
+    left:45%;
+    border: 1px solid black;
+    width: 54%;
+    height: 200vh;
+
+}
+
+#name{
+    border-bottom: 1px solid rgb(116, 116, 116);
+    border-top: 1px solid rgb(112, 112, 112);
+    width:90%;
+    margin-top: 20px;
+    padding: 10px;
+    color:rgb(48, 47, 31);
+    
+    font-family: 'Trebuchet MS', sans-serif;
+}
+#name h2{
+    margin:0;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.9em;
+}
+#price{
+    border-bottom: 1px solid black;
+    font-size: 1.2em;
+    padding:0 30px ;
+    color: rgb(34, 34, 34);
+}
+
+#details div h4{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+}
+
+#description{
+    border-bottom : 1px solid rgb(0, 0, 0);
+    width: 90%;
+    padding: 20px 0 20px 20px;
+    height: fit-content;
+}
+
+
+
+

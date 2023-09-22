@@ -1,14 +1,16 @@
 const express = require('express');
-const {addProduct, GetProduct, GetSpecificProduct} = require('../controllers/product_controller');
+const {addProduct, GetAllProduct, GetSpecificProduct, productPage} = require('../controllers/product_controller');
 const router = express.Router();
 
 
 
 
 
-router.route('/').get(GetProduct);
+router.route('/api/').get(GetAllProduct);
 
-router.route('/:id').get(GetSpecificProduct);
+router.route('/api/:id').get(GetSpecificProduct);
+
+router.route('/:id').get(productPage)
     
 
 

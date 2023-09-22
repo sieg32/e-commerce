@@ -59,7 +59,7 @@ const Listing = document.querySelector('#product-listing');
 
 
 const fetchProducts=async()=>{
-  await  axios.get('/products/').then((response)=>{
+  await  axios.get('/products/api/').then((response)=>{
         const arrayProduct = response.data;
         arrayProduct.forEach(element => {
             const product_card = document.createElement('div')

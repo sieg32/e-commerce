@@ -2,10 +2,12 @@ const mongoose = require('mongoose');
 const product = require('../db_schema/model_product')
 
 
-GetProduct = async (req,res)=>{
-    
-    const Product_list = await product.find({});
-    res.send(Product_list);
+GetAllProduct = async (req,res)=>{
+   
+        
+        const Product_list = await product.find({});
+        res.send(Product_list);
+   
 }
 
 addProduct = async (req,res)=>{
@@ -21,7 +23,7 @@ GetSpecificProduct = async (req,res)=>{
     
     try{
         const dataProduct = await product.findOne({product_name:req.params.id});
-        console.log(dataProduct)
+        
        
 
         if(dataProduct){
@@ -39,8 +41,17 @@ GetSpecificProduct = async (req,res)=>{
     
 }
 
+productPage = (req,res)=>{
+    let current = __dirname;
+    let Root = current.slice(0, -12);
+    
+    res.sendFile(Root + "/product_page.html");
+
+
+}
 
 
 
 
-module.exports = {addProduct, GetProduct, GetSpecificProduct};
+
+module.exports = {addProduct, GetAllProduct, GetSpecificProduct, productPage};

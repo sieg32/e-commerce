@@ -12,6 +12,10 @@ const productSchema = new Schema({
 
         require:true
     },
+    description:{
+        type:String,
+        require:true
+    }
 
 
 })
