@@ -1,3 +1,5 @@
+
+
 const usernameAvatar = document.querySelector('#user h3')
 if(localStorage.getItem("user")){
     usernameAvatar.textContent = localStorage.getItem('user');
@@ -51,5 +53,19 @@ btn_confirm.addEventListener('click',()=>{
     window.alert('logged out');
     window.location.href = '/';
 
+    
+})
+
+const searchBar = document.getElementById('search-div');
+console.log(searchBar);
+searchBar.addEventListener('submit',(event)=>{
+    event.preventDefault();
+    
+    const formdata = new FormData(event.target);
+    formdata.forEach((value,key)=>{
+        console.log(key,value);
+        window.location.href ='/products/?query='+value;
+
+    })
     
 })

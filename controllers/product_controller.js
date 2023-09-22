@@ -50,8 +50,25 @@ productPage = (req,res)=>{
 
 }
 
+searchPage = (req,res)=>{
+    let current = __dirname;
+    let Root = current.slice(0, -12);
+    
+    res.sendFile(Root + "/searchProduct.html");
+
+
+}
+
+
+searchProduct = async (req,res)=>{
+    console.log(req.query)
+    res.send("received");
+    const Result = await product.find({product_name:{$regex: new RegExp(req.query.query1,'i')}})
+    console.log(Result);
+}
 
 
 
 
-module.exports = {addProduct, GetAllProduct, GetSpecificProduct, productPage};
+
+module.exports = {addProduct, GetAllProduct, GetSpecificProduct, productPage, searchPage, searchProduct};

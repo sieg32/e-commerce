@@ -1,4 +1,6 @@
 
+
+
 const Listing = document.querySelector('#product-listing');
 
 
