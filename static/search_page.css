@@ -1,3 +1,105 @@
 body{
     margin:0;
+    background-color: rgb(233, 233, 233);
 }
+
+#main{
+    display: flex;
+
+}
+
+
+#filters{
+    top: 0;
+    display: flex;
+    position: sticky;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    max-width: 30vw;
+    border: 1px solid black;
+    padding: 10px;
+    height: fit-content;
+    
+
+}
+#price{
+    display: block;
+    margin-top: 10px;
+
+    
+    border: 1px solid black;
+    width: 100%;
+    
+    
+    
+}
+#price legend{
+    padding: 10px;
+    font-size: 1.1em;
+    font-weight: 800;
+}
+
+#minPrice , #maxPrice{
+    height: 30px;
+    margin: 5px;
+    font-size: 1em;
+    width: 80px;
+    text-align: center;
+}
+
+
+#rating{
+    margin-top: 10px;
+    border: 1px solid black;
+    display:block;
+    width: 100%;
+
+    
+    
+    
+    
+}
+#rating legend{
+    padding: 10px;
+    
+    font-size: 1.1em;
+    font-weight: 800;
+}
+#rating div{
+    padding: 3px 10px;
+    width: max-content;
+    display: flex;
+    justify-content: center;
+}
+#rating label{
+   
+    display: block;
+
+}
+
+
+#filters form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#apply{
+    width: 60%;
+    margin-top: 10px;
+    
+    height: 40px;
+    
+}
+
+#results{
+    width: 100%;
+    
+    padding:5px;
+    display:grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    
+}
+

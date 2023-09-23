@@ -61,10 +61,12 @@ searchPage = (req,res)=>{
 
 
 searchProduct = async (req,res)=>{
-    console.log(req.query)
-    res.send("received");
-    const Result = await product.find({product_name:{$regex: new RegExp(req.query.query1,'i')}})
-    console.log(Result);
+   
+    const Result = await product.find({product_name:{$regex: new RegExp(req.query.query,'i')},
+    price:{$gte:req.query.minPrice || 0 , $lte:req.query.maxPrice || 99999999 },
+    rating:{$gte:req.query.minRating || 0, $lte:req.query.maxRating || 5 }})
+
+    res.send(Result);
 }
 
 
