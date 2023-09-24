@@ -3,14 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>e-commerce</title>
+    <title>orders</title>
     <link rel="icon" type="image/x-icon" href="/icon/e-commerce.png">
     <link rel="stylesheet" href="/header.css">
-    <link rel="stylesheet" href="main_page.css">
-    <link rel="stylesheet" href="product.css">
-    <script src="https://kit.fontawesome.com/cd635a5268.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-
+    <link rel="stylesheet" href="orders_page.css">
 </head>
 <body>
     <div id="confirmPopup">
@@ -44,30 +40,24 @@
             </div>
         </div>
     </header>
-    <section id="suggestion">
-        <p>items</p>
-        <p>items</p>
-        <p>items</p>
-        <p>items</p>
-        <p>items</p>
-        <p>items</p>
+    
+    <div id="ordersList">
 
+        <div class="order">
+            <p>order id</p>
+            <p>user id</p>
+            <p>product id</p>
+            <p>quantity</p>
+            <p>date</p>
+            <p>progress</p>
+            <a href="#">detail</a>
 
-    </section>
-
-    <div id="main-window">
-       
-        <div id="product-listing">
-           
-            
-            
         </div>
+
     </div>
 
-    
-    <script type="module" src="/main_page.js"></script>
+    <script type="module" src="/orders_page.js"></script>
     <script type="module" src="/header.js"></script>
 
-    
 </body>
 </html>

@@ -5,16 +5,16 @@ const Schema = mongoose.Schema;
 
 const productSchema = new Schema({
     product_name:{type:String,
-        require : true},
-    price:{type:Number, require:true},
+        required : true},
+    price:{type:Number, required:true},
     rating:{
         type:Number,
 
-        require:true
+        required:true
     },
     description:{
         type:String,
-        require:true
+        required:true
     }
 
 

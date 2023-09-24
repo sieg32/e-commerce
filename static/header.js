@@ -1,5 +1,8 @@
 
-
+const logo = document.querySelector('#logo')
+logo.addEventListener('click',()=>{
+    window.location.href = '/';
+})
 const usernameAvatar = document.querySelector('#user h3')
 if(localStorage.getItem("user")){
     usernameAvatar.textContent = localStorage.getItem('user');
@@ -7,7 +10,9 @@ if(localStorage.getItem("user")){
 
 const profile_box = document.querySelector('#user_box');
 const userAvatar_box = document.querySelector('#user');
+
 userAvatar_box.addEventListener('click',(elem)=>{
+    console.log('good')
     if(localStorage.getItem('user')){
 
         if(profile_box.style.display === "flex" ){
@@ -30,7 +35,7 @@ view_profile.addEventListener('click',()=>{
 
 const orders = document.querySelector('#orders');
 orders.addEventListener('click',()=>{
-    window.location.href="/user/orders";
+    window.location.href="/orders";
 })
 
 const logOut = document.querySelector('#logOut');

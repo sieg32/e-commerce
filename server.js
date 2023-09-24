@@ -2,6 +2,7 @@ const express = require('express');
 const port = 5000;
 const products = require('./routes/products')
 const user_route = require('./routes/user')
+const order_route= require('./routes/order')
 const connect = require('./db_connect/db.js')
 require('dotenv').config();
 
@@ -18,8 +19,9 @@ app.use(express.json());
 
 
 
-app.use('/products', products)
+app.use('/products', products);
 app.use('/user',user_route);
+app.use('/orders',order_route);
 
 
 /*-------------------basic routes---------------------------- */
@@ -41,7 +43,7 @@ start = async ()=>{
     try{
         await connect(process.env.MONGOOSE_URI);
     
-        app.listen(port, console.log('server started at port ${nigga}... '));
+        app.listen(port, console.log('server started at port ' + port));
     
     }catch(error){
         console.log(error);
